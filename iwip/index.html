@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>IWIP Company Profile</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header id="header">
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <span>IWIP</span>
+    </div>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="active">Beranda</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#career">Karir</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="subtitle">INDONESIA WEDA BAY INDUSTRIAL PARK</p>
+    <h1>Membangun Masa Depan Industri Indonesia</h1>
+    <p>
+      Website company profile modern untuk menampilkan profil perusahaan,
+      berita, karir, galeri, dan informasi kontak.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#about" class="btn primary">Tentang Kami</a>
+      <a href="#career" class="btn secondary">Lihat Karir</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div>
+    <h2>5000+</h2>
+    <p>Karyawan</p>
+  </div>
+  <div>
+    <h2>120+</h2>
+    <p>Program CSR</p>
+  </div>
+  <div>
+    <h2>25+</h2>
+    <p>Departemen</p>
+  </div>
+  <div>
+    <h2>10+</h2>
+    <p>Tahun Berkembang</p>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-title">
+    <p>TENTANG PERUSAHAAN</p>
+    <h2>Profil Perusahaan</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-image"></div>
+
+    <div class="about-text">
+      <h3>Kawasan Industri Modern dan Terintegrasi</h3>
+      <p>
+        IWIP merupakan kawasan industri yang mendukung pengembangan industri
+        modern, teknologi, sumber daya manusia, serta keberlanjutan lingkungan.
+      </p>
+
+      <div class="features">
+        <div>✔ Industri Terintegrasi</div>
+        <div>✔ Program CSR</div>
+        <div>✔ ESG</div>
+        <div>✔ Kesempatan Karir</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="news">
+  <div class="section-title">
+    <p>NEWS</p>
+    <h2>Kegiatan Perusahaan</h2>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="News">
+      <div class="card-body">
+        <h3>Pengembangan Kawasan</h3>
+        <p>Pembangunan kawasan industri modern dan terintegrasi.</p>
+        <button onclick="openModal('Pengembangan Kawasan')">Baca Selengkapnya</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="News">
+      <div class="card-body">
+        <h3>Program CSR</h3>
+        <p>Kegiatan sosial dan pemberdayaan masyarakat sekitar.</p>
+        <button onclick="openModal('Program CSR')">Baca Selengkapnya</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="News">
+      <div class="card-body">
+        <h3>Lingkungan & ESG</h3>
+        <p>Komitmen terhadap lingkungan dan keberlanjutan.</p>
+        <button onclick="openModal('Lingkungan & ESG')">Baca Selengkapnya</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="career" id="career">
+  <div class="section-title">
+    <p>KARIR</p>
+    <h2>Lowongan Kerja</h2>
+  </div>
+
+  <div class="job-grid">
+    <div class="job">
+      <h3>Admin Staff</h3>
+      <p>Full Time - Weda Bay</p>
+      <button onclick="openModal('Admin Staff')">Apply</button>
+    </div>
+
+    <div class="job">
+      <h3>IT Support</h3>
+      <p>Full Time - Site Office</p>
+      <button onclick="openModal('IT Support')">Apply</button>
+    </div>
+
+    <div class="job">
+      <h3>Backend Developer</h3>
+      <p>Contract - Head Office</p>
+      <button onclick="openModal('Backend Developer')">Apply</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="section-title">
+    <p>GALERI</p>
+    <h2>Dokumentasi</h2>
+  </div>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Gallery">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Gallery">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Gallery">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Gallery">
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <div>
+      <h2>Kontak Kami</h2>
+      <p>
+        Silakan hubungi kami untuk informasi perusahaan, kerja sama,
+        media, atau rekrutmen.
+      </p>
+    </div>
+
+    <form onsubmit="sendForm(event)">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="6" placeholder="Pesan" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 IWIP Company Profile. All Rights Reserved.</p>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal()">×</span>
+    <h2 id="modalTitle">Judul</h2>
+    <p>
+      Ini adalah contoh popup informasi. Nanti bagian ini bisa diganti dengan
+      detail berita, detail lowongan kerja, atau informasi perusahaan.
+    </p>
+  </div>
+</div>
+
+<button class="backtop" id="backtop" onclick="backToTop()">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
