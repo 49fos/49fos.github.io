@@ -3,49 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Website company profile modern dan dinamis untuk GitHub Pages." />
-  <title>Tentang | IWIP Modern</title>
+  <meta name="description" content="Website company profile modern, responsive desktop dan mobile." />
+  <title>Tentang | IWIP Modern Website</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="about">
-<header class="site-header" id="header">
+<header class="header" id="header">
   <nav class="navbar">
-    <a href="index.html" class="brand"><span class="brand-mark"></span><span>IWIP</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" data-nav="home">Beranda</a></li>
-      <li><a href="about.html" data-nav="about">Tentang</a></li>
-      <li><a href="news.html" data-nav="news">Kegiatan</a></li>
-      <li><a href="career.html" data-nav="career">Karir</a></li>
-      <li><a href="esg.html" data-nav="esg">ESG</a></li>
-      <li><a href="gallery.html" data-nav="gallery">Galeri</a></li>
-      <li><a href="contact.html" data-nav="contact">Kontak</a></li>
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span>IWIP</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" data-page="home">Beranda</a></li>
+      <li><a href="about.html" data-page="about">Tentang</a></li>
+      <li><a href="news.html" data-page="news">Kegiatan</a></li>
+      <li><a href="career.html" data-page="career">Karir</a></li>
+      <li><a href="esg.html" data-page="esg">ESG</a></li>
+      <li><a href="gallery.html" data-page="gallery">Galeri</a></li>
+      <li><a href="contact.html" data-page="contact">Kontak</a></li>
     </ul>
+
     <div class="nav-actions">
-      <button class="circle-btn" onclick="openSearch()">⌕</button>
-      <button class="circle-btn" onclick="toggleTheme()">◐</button>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <button class="icon-btn" type="button" onclick="openSearch()" aria-label="Search">⌕</button>
+      <button class="icon-btn" type="button" onclick="toggleTheme()" aria-label="Theme">◐</button>
+      <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button>
     </div>
   </nav>
 </header>
-<div class="search-panel" id="searchPanel">
-  <button class="close-panel" onclick="closeSearch()">×</button>
-  <div class="search-box">
-    <p class="eyebrow">SEARCH</p><h2>Cari Informasi Website</h2>
-    <input type="text" id="searchInput" placeholder="Contoh: karir, ESG, news..." oninput="runSearch()" />
-    <div id="searchResults"></div>
+
+<div class="search-overlay" id="searchOverlay">
+  <button class="close-btn" type="button" onclick="closeSearch()">×</button>
+  <div class="search-card">
+    <p class="label">Search</p>
+    <h2>Cari Informasi Website</h2>
+    <input type="text" id="searchInput" placeholder="Cari: karir, ESG, galeri, kontak..." oninput="runSearch()" />
+    <div id="searchResults" class="search-results"></div>
   </div>
 </div>
 
-<main><section class="page-hero about-hero"><div><p class="eyebrow">ABOUT</p><h1>Tentang IWIP</h1><p>Profil perusahaan, visi, misi, dan nilai utama.</p></div></section><section class="section split-section"><div class="image-stack reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=65"></div><div class="section-copy reveal"><p class="eyebrow dark-text">PROFIL</p><h2>Kawasan Industri Berorientasi Masa Depan</h2><p>Halaman ini berisi profil perusahaan. Konten dapat diganti sesuai kebutuhan, seperti sejarah, struktur organisasi, legalitas, dan perkembangan perusahaan.</p><div class="mini-features"><span>✔ Inovasi</span><span>✔ Teknologi</span><span>✔ SDM</span><span>✔ Keberlanjutan</span></div></div></section><section class="section soft-section"><div class="section-title reveal"><p class="eyebrow dark-text">VISI & MISI</p><h2>Arah Perusahaan</h2></div><div class="feature-grid"><article class="feature-card reveal"><span>V</span><h3>Visi</h3><p>Menjadi kawasan industri unggul, modern, dan berkelanjutan.</p></article><article class="feature-card reveal"><span>M</span><h3>Misi</h3><p>Mendorong pertumbuhan ekonomi, pengembangan SDM, dan tanggung jawab lingkungan.</p></article><article class="feature-card reveal"><span>N</span><h3>Nilai</h3><p>Profesional, aman, transparan, inovatif, dan bertanggung jawab.</p></article></div></section></main>
+<main>
+  <section class="page-hero about-hero">
+    <div>
+      <p class="label">About</p>
+      <h1>Tentang IWIP</h1>
+      <p>Profil perusahaan, visi, misi, dan nilai utama.</p>
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div class="image-card reveal">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=65" alt="Tentang perusahaan">
+    </div>
+    <div class="section-text reveal">
+      <p class="label dark-label">Profil Perusahaan</p>
+      <h2>Kawasan Industri Berorientasi Masa Depan</h2>
+      <p>Halaman ini dapat digunakan untuk menjelaskan sejarah perusahaan, bidang usaha, struktur organisasi, nilai perusahaan, dan pencapaian utama.</p>
+      <div class="feature-list">
+        <span>Inovasi</span>
+        <span>Teknologi</span>
+        <span>SDM</span>
+        <span>Keberlanjutan</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="section-title reveal">
+      <p class="label dark-label">Visi & Misi</p>
+      <h2>Arah Perusahaan</h2>
+    </div>
+    <div class="card-grid">
+      <article class="info-card reveal"><span>V</span><h3>Visi</h3><p>Menjadi kawasan industri unggul, modern, dan berkelanjutan.</p></article>
+      <article class="info-card reveal"><span>M</span><h3>Misi</h3><p>Mendorong pertumbuhan ekonomi, pengembangan SDM, dan tanggung jawab lingkungan.</p></article>
+      <article class="info-card reveal"><span>N</span><h3>Nilai</h3><p>Profesional, aman, transparan, inovatif, dan bertanggung jawab.</p></article>
+    </div>
+  </section>
+</main>
+
 <footer class="footer">
-  <div class="footer-grid">
-    <div><a href="index.html" class="brand footer-brand"><span class="brand-mark"></span><span>IWIP</span></a><p>Template company profile modern, ringan, responsif, dan siap digunakan di GitHub Pages.</p></div>
-    <div><h4>Menu</h4><a href="about.html">Tentang</a><a href="news.html">Kegiatan</a><a href="career.html">Karir</a><a href="esg.html">ESG</a></div>
-    <div><h4>Kontak</h4><p>Email: info@company.co.id</p><p>Telp: +62 812 0000 0000</p><p>Weda Bay, Indonesia</p></div>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="logo footer-logo">
+        <span class="logo-mark"></span>
+        <span>IWIP</span>
+      </a>
+      <p>Template website company profile modern, ringan, dan responsive untuk GitHub Pages.</p>
+    </div>
+    <div>
+      <h4>Menu</h4>
+      <a href="about.html">Tentang</a>
+      <a href="news.html">Kegiatan</a>
+      <a href="career.html">Karir</a>
+      <a href="contact.html">Kontak</a>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p>Email: info@company.co.id</p>
+      <p>Telepon: +62 812 0000 0000</p>
+      <p>Weda Bay, Indonesia</p>
+    </div>
   </div>
   <div class="footer-bottom">© 2026 IWIP Modern Website. All Rights Reserved.</div>
 </footer>
-<div class="modal" id="modal"><div class="modal-content"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle">Detail</h2><p id="modalText">Informasi detail akan tampil di sini.</p></div></div>
-<button class="backtop" id="backtop" onclick="backToTop()">↑</button>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" type="button" onclick="closeModal()">×</button>
+    <h2 id="modalTitle">Detail</h2>
+    <p id="modalText">Konten detail akan tampil di sini.</p>
+  </div>
+</div>
+
+<button class="backtop" id="backtop" type="button" onclick="backToTop()">↑</button>
+
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>

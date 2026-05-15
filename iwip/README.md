@@ -1,8 +1,8 @@
-# IWIP Modern Dynamic Website
+# IWIP Complete Responsive Website
 
-Website static multi-page siap upload ke GitHub Pages.
+Website multi-page untuk GitHub Pages, compatible desktop dan mobile.
 
-## Halaman
+## File
 - index.html
 - about.html
 - news.html
@@ -10,23 +10,25 @@ Website static multi-page siap upload ke GitHub Pages.
 - esg.html
 - gallery.html
 - contact.html
+- styles.css
+- script.js
 
 ## Fitur
-- Desain modern mirip contoh awal, dikembangkan lebih dinamis
-- Hero slider otomatis
-- Navbar sticky dan responsive
-- Dark mode
+- Navbar responsive
+- Multi-page website
 - Search overlay
+- Dark mode
 - Filter news
 - Filter career
 - Form apply simulasi
 - Form contact simulasi
-- Gallery preview
+- Galeri fullscreen preview
 - Modal popup
-- Scroll animation
-- Counter statistik
-- Optimasi gambar dengan parameter kompresi dan lazy loading
+- Counter animation
+- Scroll reveal animation
+- Back to top
+- Compatible desktop dan mobile
 
-## GitHub Pages
-Upload semua file ke repository root:
+## Upload GitHub Pages
+Upload semua file ke root repository.
 Settings > Pages > Branch main > /root > Save
