@@ -1,2 +1,32 @@
 
-const page=document.body.dataset.page,header=document.getElementById("header"),backtop=document.getElementById("backtop"),navLinks=document.getElementById("navLinks");const slideTexts=[{title:"Membangun Masa Depan Industri Indonesia",text:"Company profile modern dengan tampilan profesional, dinamis, responsif, dan siap upload ke GitHub Pages."},{title:"Industri Modern dan Terintegrasi",text:"Menghadirkan tampilan website yang kuat untuk profil perusahaan, kegiatan, karir, dan ESG."},{title:"Komitmen Terhadap Keberlanjutan",text:"Desain dinamis untuk menunjukkan program lingkungan, sosial, dan tata kelola perusahaan."}];let currentSlide=0;window.addEventListener("load",()=>{setActiveNav();restoreTheme();revealOnScroll();startCounters();startHeroSlider()});window.addEventListener("scroll",()=>{header.classList.toggle("scrolled",window.scrollY>40);backtop.classList.toggle("show",window.scrollY>400);revealOnScroll()});function setActiveNav(){document.querySelectorAll(".nav-links a").forEach(a=>{a.classList.toggle("active",a.dataset.nav===page)})}function toggleMenu(){navLinks.classList.toggle("show")}function setSlide(index){const backgrounds=document.querySelectorAll(".hero-bg"),dots=document.querySelectorAll(".dot"),title=document.getElementById("heroTitle"),text=document.getElementById("heroText");if(!backgrounds.length)return;currentSlide=index;backgrounds.forEach((bg,i)=>bg.classList.toggle("active",i===index));dots.forEach((dot,i)=>dot.classList.toggle("active",i===index));title.textContent=slideTexts[index].title;text.textContent=slideTexts[index].text}function startHeroSlider(){if(!document.querySelector(".hero"))return;setInterval(()=>{currentSlide=(currentSlide+1)%3;setSlide(currentSlide)},5500)}function startCounters(){document.querySelectorAll("[data-count]").forEach(counter=>{const target=Number(counter.dataset.count);let current=0;const step=Math.max(1,target/90);const update=()=>{current+=step;if(current<target){counter.textContent=Math.ceil(current);requestAnimationFrame(update)}else counter.textContent=target+"+"};update()})}function revealOnScroll(){document.querySelectorAll(".reveal").forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-70)el.classList.add("show")})}function openModal(title,text){document.getElementById("modalTitle").textContent=title||"Detail Informasi";document.getElementById("modalText").textContent=text||"Konten detail dapat diganti sesuai kebutuhan website.";document.getElementById("modal").classList.add("active")}function closeModal(){document.getElementById("modal").classList.remove("active")}function backToTop(){window.scrollTo({top:0,behavior:"smooth"})}function filterItems(category,className,btn){document.querySelectorAll("."+className).forEach(item=>{item.style.display=category==="all"||item.dataset.category===category?"":"none"});btn.parentElement.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active")}function selectJob(position){const input=document.getElementById("jobPosition");if(input){input.value=position;input.scrollIntoView({behavior:"smooth",block:"center"})}}function submitApply(event){event.preventDefault();alert("Lamaran berhasil dikirim secara simulasi. Untuk upload asli perlu backend/database.");event.target.reset()}function submitContact(event){event.preventDefault();alert("Pesan berhasil dikirim secara simulasi. Untuk kirim email asli perlu backend atau layanan form.");event.target.reset()}function previewImage(src){document.getElementById("previewImg").src=src;document.getElementById("imagePreview").classList.add("active")}function closePreview(){document.getElementById("imagePreview").classList.remove("active")}const searchData=[{title:"Beranda",desc:"Halaman utama website company profile.",url:"index.html"},{title:"Tentang IWIP",desc:"Profil perusahaan, visi, misi, dan nilai.",url:"about.html"},{title:"Kegiatan Perusahaan",desc:"News, CSR, industri, dan ESG.",url:"news.html"},{title:"Karir",desc:"Lowongan kerja dan form lamaran.",url:"career.html"},{title:"ESG",desc:"Environment, Social, Governance.",url:"esg.html"},{title:"Galeri",desc:"Dokumentasi foto kegiatan.",url:"gallery.html"},{title:"Kontak",desc:"Form kontak dan informasi perusahaan.",url:"contact.html"}];function openSearch(){document.getElementById("searchPanel").classList.add("active");document.getElementById("searchInput").focus()}function closeSearch(){document.getElementById("searchPanel").classList.remove("active")}function runSearch(){const value=document.getElementById("searchInput").value.toLowerCase(),box=document.getElementById("searchResults");box.innerHTML="";if(value.length<2)return;const results=searchData.filter(item=>item.title.toLowerCase().includes(value)||item.desc.toLowerCase().includes(value));if(!results.length){box.innerHTML='<div class="search-result">Tidak ada hasil ditemukan.</div>';return}results.forEach(item=>{box.innerHTML+=`<div class="search-result"><a href="${item.url}">${item.title}</a><p>${item.desc}</p></div>`})}function toggleTheme(){document.body.classList.toggle("dark-mode");localStorage.setItem("theme",document.body.classList.contains("dark-mode")?"dark":"light")}function restoreTheme(){if(localStorage.getItem("theme")==="dark")document.body.classList.add("dark-mode")}
+const header = document.getElementById('header');
+const backtop = document.getElementById('backtop');
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 50){
+    header.classList.add('scrolled');
+  }else{
+    header.classList.remove('scrolled');
+  }
+
+  if(window.scrollY > 400){
+    backtop.classList.add('show');
+  }else{
+    backtop.classList.remove('show');
+  }
+});
+
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('show');
+}
+
+function backToTop(){
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+}
+
+function toggleTheme(){
+  document.body.classList.toggle('dark-mode');
+}
