@@ -3,119 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beranda | IWIP Company Profile</title>
+  <meta name="description" content="Website company profile modern dan dinamis untuk GitHub Pages." />
+  <title>Beranda | IWIP Modern</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div id="preloader"><div>IWIP</div><span>Loading website...</span></div>
-
-<header id="header">
+<body data-page="home">
+<header class="site-header" id="header">
   <nav class="navbar">
-    <a class="logo" href="index.html">
-      <div class="logo-icon"></div>
-      <span>IWIP</span>
-    </a>
-
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html" data-page="home">Beranda</a></li>
-      <li><a href="about.html" data-page="about">Tentang</a></li>
-      <li><a href="news.html" data-page="news">News</a></li>
-      <li><a href="career.html" data-page="career">Karir</a></li>
-      <li><a href="esg.html" data-page="esg">ESG</a></li>
-      <li><a href="gallery.html" data-page="gallery">Galeri</a></li>
-      <li><a href="contact.html" data-page="contact">Kontak</a></li>
+    <a href="index.html" class="brand"><span class="brand-mark"></span><span>IWIP</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-nav="home">Beranda</a></li>
+      <li><a href="about.html" data-nav="about">Tentang</a></li>
+      <li><a href="news.html" data-nav="news">Kegiatan</a></li>
+      <li><a href="career.html" data-nav="career">Karir</a></li>
+      <li><a href="esg.html" data-nav="esg">ESG</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Galeri</a></li>
+      <li><a href="contact.html" data-nav="contact">Kontak</a></li>
     </ul>
-
     <div class="nav-actions">
-      <button class="icon-btn" onclick="openSearch()" title="Search">🔍</button>
-      <button class="icon-btn" onclick="toggleTheme()" title="Theme">🌙</button>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <button class="circle-btn" onclick="openSearch()">⌕</button>
+      <button class="circle-btn" onclick="toggleTheme()">◐</button>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
     </div>
   </nav>
 </header>
-
-<div class="search-overlay" id="searchOverlay">
-  <button class="search-close" onclick="closeSearch()">×</button>
-  <h2>Cari Informasi</h2>
-  <input id="searchInput" type="text" placeholder="Cari news, karir, ESG..." oninput="runSearch()" />
-  <div id="searchResults"></div>
+<div class="search-panel" id="searchPanel">
+  <button class="close-panel" onclick="closeSearch()">×</button>
+  <div class="search-box">
+    <p class="eyebrow">SEARCH</p><h2>Cari Informasi Website</h2>
+    <input type="text" id="searchInput" placeholder="Contoh: karir, ESG, news..." oninput="runSearch()" />
+    <div id="searchResults"></div>
+  </div>
 </div>
 
 <main>
 <section class="hero">
-  <div class="hero-content reveal">
-    <p class="subtitle">INDONESIA WEDA BAY INDUSTRIAL PARK</p>
-    <h1 id="heroTitle">Membangun Masa Depan Industri Indonesia</h1>
-    <p id="heroText">Website company profile modern untuk menampilkan profil perusahaan, berita, karir, ESG, galeri, dan kontak.</p>
-    <div class="hero-buttons">
-      <a class="btn primary" href="about.html">Tentang Kami</a>
-      <a class="btn secondary" href="career.html">Lihat Karir</a>
-    </div>
-  </div>
-  <div class="slider-buttons">
-    <button onclick="changeSlide(0)">01</button>
-    <button onclick="changeSlide(1)">02</button>
-    <button onclick="changeSlide(2)">03</button>
-  </div>
+  <div class="hero-bg active" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=65')"></div>
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=65')"></div>
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=65')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content reveal"><p class="eyebrow">INDONESIA WEDA BAY INDUSTRIAL PARK</p><h1 id="heroTitle">Membangun Masa Depan Industri Indonesia</h1><p id="heroText">Company profile modern dengan tampilan profesional, dinamis, responsif, dan siap upload ke GitHub Pages.</p><div class="hero-actions"><a href="about.html" class="btn primary">Tentang Kami</a><a href="career.html" class="btn ghost">Lihat Karir</a></div></div>
+  <div class="hero-dots"><button class="dot active" onclick="setSlide(0)">01</button><button class="dot" onclick="setSlide(1)">02</button><button class="dot" onclick="setSlide(2)">03</button></div>
 </section>
-
-<section class="stats reveal">
-  <div><h2 class="counter" data-target="5000">0</h2><p>Karyawan</p></div>
-  <div><h2 class="counter" data-target="120">0</h2><p>Program CSR</p></div>
-  <div><h2 class="counter" data-target="25">0</h2><p>Departemen</p></div>
-  <div><h2 class="counter" data-target="10">0</h2><p>Tahun Berkembang</p></div>
-</section>
-
-<section class="section reveal">
-  <div class="section-title"><p>LAYANAN WEBSITE</p><h2>Fitur Utama</h2></div>
-  <div class="cards">
-    <div class="card"><div class="card-body"><h3>Company Profile</h3><p>Profil perusahaan, visi misi, nilai, dan informasi umum.</p></div></div>
-    <div class="card"><div class="card-body"><h3>News & Kegiatan</h3><p>Daftar berita dengan filter kategori dan modal detail.</p></div></div>
-    <div class="card"><div class="card-body"><h3>Karir</h3><p>Lowongan kerja, filter posisi, dan simulasi form apply.</p></div></div>
-  </div>
-</section>
-
-<section class="cta reveal">
-  <h2>Bangun Website Perusahaan Modern</h2>
-  <p>Template ini siap digunakan di GitHub Pages dan bisa dikembangkan ke backend Laravel atau Node.js.</p>
-  <a href="contact.html" class="btn primary">Hubungi Kami</a>
-</section>
+<section class="stat-strip reveal"><div><strong data-count="5000">0</strong><span>Karyawan</span></div><div><strong data-count="120">0</strong><span>Program CSR</span></div><div><strong data-count="25">0</strong><span>Departemen</span></div><div><strong data-count="10">0</strong><span>Tahun Berkembang</span></div></section>
+<section class="section split-section"><div class="section-copy reveal"><p class="eyebrow dark-text">COMPANY PROFILE</p><h2>Kawasan Industri Modern dan Terintegrasi</h2><p>Website ini dikembangkan dengan struktur multi-halaman, animasi ringan, pencarian, dark mode, filter konten, modal detail, galeri preview, dan form simulasi.</p><div class="mini-features"><span>✔ Responsive</span><span>✔ Fast Loading</span><span>✔ Dynamic UI</span><span>✔ GitHub Pages Ready</span></div><a href="about.html" class="btn primary">Pelajari Lebih Lanjut</a></div><div class="image-stack reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=65"><div class="floating-card"><strong>ESG Focus</strong><span>Environment • Social • Governance</span></div></div></section>
+<section class="section dark-section"><div class="section-title reveal"><p class="eyebrow">HIGHLIGHT</p><h2>Fitur Website</h2></div><div class="feature-grid"><article class="feature-card reveal"><span>01</span><h3>News & Kegiatan</h3><p>Konten berita dengan filter kategori dan popup detail.</p></article><article class="feature-card reveal"><span>02</span><h3>Karir</h3><p>Daftar lowongan, filter posisi, dan simulasi form apply.</p></article><article class="feature-card reveal"><span>03</span><h3>Galeri Dinamis</h3><p>Preview foto dengan tampilan modern dan ringan.</p></article></div></section>
+<section class="cta-section reveal"><h2>Siap Digunakan untuk GitHub Pages</h2><p>Upload semua file ke repository, lalu aktifkan Pages dari branch main.</p><a href="contact.html" class="btn primary">Hubungi Kami</a></section>
 </main>
-
 <footer class="footer">
   <div class="footer-grid">
-    <div>
-      <h3>IWIP</h3>
-      <p>Company profile modern berbasis HTML, CSS, dan JavaScript untuk GitHub Pages.</p>
-    </div>
-    <div>
-      <h4>Menu</h4>
-      <a href="about.html">Tentang</a>
-      <a href="news.html">News</a>
-      <a href="career.html">Karir</a>
-      <a href="contact.html">Kontak</a>
-    </div>
-    <div>
-      <h4>Kontak</h4>
-      <p>Email: info@company.co.id</p>
-      <p>Telepon: +62 812 0000 0000</p>
-      <p>Weda Bay, Indonesia</p>
-    </div>
+    <div><a href="index.html" class="brand footer-brand"><span class="brand-mark"></span><span>IWIP</span></a><p>Template company profile modern, ringan, responsif, dan siap digunakan di GitHub Pages.</p></div>
+    <div><h4>Menu</h4><a href="about.html">Tentang</a><a href="news.html">Kegiatan</a><a href="career.html">Karir</a><a href="esg.html">ESG</a></div>
+    <div><h4>Kontak</h4><p>Email: info@company.co.id</p><p>Telp: +62 812 0000 0000</p><p>Weda Bay, Indonesia</p></div>
   </div>
-  <div class="copyright">© 2026 IWIP Company Profile. All Rights Reserved.</div>
+  <div class="footer-bottom">© 2026 IWIP Modern Website. All Rights Reserved.</div>
 </footer>
-
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <h2 id="modalTitle">Detail</h2>
-    <p id="modalText">Informasi detail akan tampil di sini.</p>
-  </div>
-</div>
-
+<div class="modal" id="modal"><div class="modal-content"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle">Detail</h2><p id="modalText">Informasi detail akan tampil di sini.</p></div></div>
 <button class="backtop" id="backtop" onclick="backToTop()">↑</button>
-
-<script>window.ACTIVE_PAGE = "home";</script>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>

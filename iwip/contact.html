@@ -3,111 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontak | IWIP Company Profile</title>
+  <meta name="description" content="Website company profile modern dan dinamis untuk GitHub Pages." />
+  <title>Kontak | IWIP Modern</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div id="preloader"><div>IWIP</div><span>Loading website...</span></div>
-
-<header id="header">
+<body data-page="contact">
+<header class="site-header" id="header">
   <nav class="navbar">
-    <a class="logo" href="index.html">
-      <div class="logo-icon"></div>
-      <span>IWIP</span>
-    </a>
-
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html" data-page="home">Beranda</a></li>
-      <li><a href="about.html" data-page="about">Tentang</a></li>
-      <li><a href="news.html" data-page="news">News</a></li>
-      <li><a href="career.html" data-page="career">Karir</a></li>
-      <li><a href="esg.html" data-page="esg">ESG</a></li>
-      <li><a href="gallery.html" data-page="gallery">Galeri</a></li>
-      <li><a href="contact.html" data-page="contact">Kontak</a></li>
+    <a href="index.html" class="brand"><span class="brand-mark"></span><span>IWIP</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-nav="home">Beranda</a></li>
+      <li><a href="about.html" data-nav="about">Tentang</a></li>
+      <li><a href="news.html" data-nav="news">Kegiatan</a></li>
+      <li><a href="career.html" data-nav="career">Karir</a></li>
+      <li><a href="esg.html" data-nav="esg">ESG</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Galeri</a></li>
+      <li><a href="contact.html" data-nav="contact">Kontak</a></li>
     </ul>
-
     <div class="nav-actions">
-      <button class="icon-btn" onclick="openSearch()" title="Search">🔍</button>
-      <button class="icon-btn" onclick="toggleTheme()" title="Theme">🌙</button>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <button class="circle-btn" onclick="openSearch()">⌕</button>
+      <button class="circle-btn" onclick="toggleTheme()">◐</button>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
     </div>
   </nav>
 </header>
-
-<div class="search-overlay" id="searchOverlay">
-  <button class="search-close" onclick="closeSearch()">×</button>
-  <h2>Cari Informasi</h2>
-  <input id="searchInput" type="text" placeholder="Cari news, karir, ESG..." oninput="runSearch()" />
-  <div id="searchResults"></div>
+<div class="search-panel" id="searchPanel">
+  <button class="close-panel" onclick="closeSearch()">×</button>
+  <div class="search-box">
+    <p class="eyebrow">SEARCH</p><h2>Cari Informasi Website</h2>
+    <input type="text" id="searchInput" placeholder="Contoh: karir, ESG, news..." oninput="runSearch()" />
+    <div id="searchResults"></div>
+  </div>
 </div>
 
-<main>
-<section class="page-hero contact-bg">
-  <h1>Kontak</h1>
-  <p>Hubungi kami untuk informasi lebih lanjut.</p>
-</section>
-
-<section class="contact-page">
-  <div class="contact-container">
-    <div class="contact-info reveal">
-      <h2>Informasi Kontak</h2>
-      <p>Email: info@company.co.id</p>
-      <p>Telepon: +62 812 0000 0000</p>
-      <p>Alamat: Weda Bay, Indonesia</p>
-      <div class="map-box">Google Maps Embed Area</div>
-    </div>
-
-    <form class="contact-form reveal" onsubmit="sendContact(event)">
-      <input type="text" placeholder="Nama" required>
-      <input type="email" placeholder="Email" required>
-      <select required>
-        <option value="">Pilih Keperluan</option>
-        <option>Informasi Perusahaan</option>
-        <option>Kerja Sama</option>
-        <option>Media</option>
-        <option>Rekrutmen</option>
-      </select>
-      <textarea rows="6" placeholder="Pesan" required></textarea>
-      <button type="submit">Kirim Pesan</button>
-    </form>
-  </div>
-</section>
-</main>
-
+<main><section class="page-hero contact-hero"><div><p class="eyebrow">CONTACT</p><h1>Kontak Kami</h1><p>Hubungi kami untuk informasi lebih lanjut.</p></div></section><section class="section contact-layout"><div class="contact-info reveal"><p class="eyebrow dark-text">INFO</p><h2>Informasi Kontak</h2><p>Email: info@company.co.id</p><p>Telepon: +62 812 0000 0000</p><p>Alamat: Weda Bay, Indonesia</p><div class="map-box">Google Maps Area</div></div><form class="modern-form reveal" onsubmit="submitContact(event)"><input type="text" placeholder="Nama" required><input type="email" placeholder="Email" required><select required><option value="">Pilih keperluan</option><option>Informasi Perusahaan</option><option>Media</option><option>Kerja Sama</option><option>Rekrutmen</option></select><textarea rows="6" placeholder="Pesan" required></textarea><button type="submit">Kirim Pesan</button></form></section></main>
 <footer class="footer">
   <div class="footer-grid">
-    <div>
-      <h3>IWIP</h3>
-      <p>Company profile modern berbasis HTML, CSS, dan JavaScript untuk GitHub Pages.</p>
-    </div>
-    <div>
-      <h4>Menu</h4>
-      <a href="about.html">Tentang</a>
-      <a href="news.html">News</a>
-      <a href="career.html">Karir</a>
-      <a href="contact.html">Kontak</a>
-    </div>
-    <div>
-      <h4>Kontak</h4>
-      <p>Email: info@company.co.id</p>
-      <p>Telepon: +62 812 0000 0000</p>
-      <p>Weda Bay, Indonesia</p>
-    </div>
+    <div><a href="index.html" class="brand footer-brand"><span class="brand-mark"></span><span>IWIP</span></a><p>Template company profile modern, ringan, responsif, dan siap digunakan di GitHub Pages.</p></div>
+    <div><h4>Menu</h4><a href="about.html">Tentang</a><a href="news.html">Kegiatan</a><a href="career.html">Karir</a><a href="esg.html">ESG</a></div>
+    <div><h4>Kontak</h4><p>Email: info@company.co.id</p><p>Telp: +62 812 0000 0000</p><p>Weda Bay, Indonesia</p></div>
   </div>
-  <div class="copyright">© 2026 IWIP Company Profile. All Rights Reserved.</div>
+  <div class="footer-bottom">© 2026 IWIP Modern Website. All Rights Reserved.</div>
 </footer>
-
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <h2 id="modalTitle">Detail</h2>
-    <p id="modalText">Informasi detail akan tampil di sini.</p>
-  </div>
-</div>
-
+<div class="modal" id="modal"><div class="modal-content"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle">Detail</h2><p id="modalText">Informasi detail akan tampil di sini.</p></div></div>
 <button class="backtop" id="backtop" onclick="backToTop()">↑</button>
-
-<script>window.ACTIVE_PAGE = "contact";</script>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>

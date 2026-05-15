@@ -3,115 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karir | IWIP Company Profile</title>
+  <meta name="description" content="Website company profile modern dan dinamis untuk GitHub Pages." />
+  <title>Karir | IWIP Modern</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div id="preloader"><div>IWIP</div><span>Loading website...</span></div>
-
-<header id="header">
+<body data-page="career">
+<header class="site-header" id="header">
   <nav class="navbar">
-    <a class="logo" href="index.html">
-      <div class="logo-icon"></div>
-      <span>IWIP</span>
-    </a>
-
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html" data-page="home">Beranda</a></li>
-      <li><a href="about.html" data-page="about">Tentang</a></li>
-      <li><a href="news.html" data-page="news">News</a></li>
-      <li><a href="career.html" data-page="career">Karir</a></li>
-      <li><a href="esg.html" data-page="esg">ESG</a></li>
-      <li><a href="gallery.html" data-page="gallery">Galeri</a></li>
-      <li><a href="contact.html" data-page="contact">Kontak</a></li>
+    <a href="index.html" class="brand"><span class="brand-mark"></span><span>IWIP</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-nav="home">Beranda</a></li>
+      <li><a href="about.html" data-nav="about">Tentang</a></li>
+      <li><a href="news.html" data-nav="news">Kegiatan</a></li>
+      <li><a href="career.html" data-nav="career">Karir</a></li>
+      <li><a href="esg.html" data-nav="esg">ESG</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Galeri</a></li>
+      <li><a href="contact.html" data-nav="contact">Kontak</a></li>
     </ul>
-
     <div class="nav-actions">
-      <button class="icon-btn" onclick="openSearch()" title="Search">🔍</button>
-      <button class="icon-btn" onclick="toggleTheme()" title="Theme">🌙</button>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <button class="circle-btn" onclick="openSearch()">⌕</button>
+      <button class="circle-btn" onclick="toggleTheme()">◐</button>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
     </div>
   </nav>
 </header>
-
-<div class="search-overlay" id="searchOverlay">
-  <button class="search-close" onclick="closeSearch()">×</button>
-  <h2>Cari Informasi</h2>
-  <input id="searchInput" type="text" placeholder="Cari news, karir, ESG..." oninput="runSearch()" />
-  <div id="searchResults"></div>
+<div class="search-panel" id="searchPanel">
+  <button class="close-panel" onclick="closeSearch()">×</button>
+  <div class="search-box">
+    <p class="eyebrow">SEARCH</p><h2>Cari Informasi Website</h2>
+    <input type="text" id="searchInput" placeholder="Contoh: karir, ESG, news..." oninput="runSearch()" />
+    <div id="searchResults"></div>
+  </div>
 </div>
 
-<main>
-<section class="page-hero career-bg">
-  <h1>Karir</h1>
-  <p>Bergabung dan berkembang bersama perusahaan.</p>
-</section>
-
-<section class="section">
-  <div class="section-title"><p>LOWONGAN</p><h2>Daftar Posisi</h2></div>
-  <div class="filter-bar reveal">
-    <button class="filter-btn active" onclick="filterCards('all', 'job-card', this)">Semua</button>
-    <button class="filter-btn" onclick="filterCards('it', 'job-card', this)">IT</button>
-    <button class="filter-btn" onclick="filterCards('admin', 'job-card', this)">Admin</button>
-    <button class="filter-btn" onclick="filterCards('site', 'job-card', this)">Site</button>
-  </div>
-
-  <div class="job-grid">
-    <div class="job job-card" data-category="admin"><h3>Admin Staff</h3><p>Full Time - Weda Bay</p><button onclick="openApply('Admin Staff')">Apply</button></div>
-    <div class="job job-card" data-category="it"><h3>IT Support</h3><p>Full Time - Site Office</p><button onclick="openApply('IT Support')">Apply</button></div>
-    <div class="job job-card" data-category="it"><h3>Backend Developer</h3><p>Contract - Head Office</p><button onclick="openApply('Backend Developer')">Apply</button></div>
-    <div class="job job-card" data-category="site"><h3>Safety Officer</h3><p>Full Time - Site</p><button onclick="openApply('Safety Officer')">Apply</button></div>
-  </div>
-</section>
-
-<section class="section light">
-  <div class="section-title"><p>FORM APPLY</p><h2>Simulasi Pendaftaran</h2></div>
-  <form class="apply-form reveal" onsubmit="submitApplication(event)">
-    <input id="applyPosition" type="text" placeholder="Posisi yang dilamar" required>
-    <input type="text" placeholder="Nama lengkap" required>
-    <input type="email" placeholder="Email" required>
-    <input type="tel" placeholder="Nomor HP" required>
-    <label class="file-label">Upload CV <input type="file" required></label>
-    <textarea rows="5" placeholder="Pesan singkat"></textarea>
-    <button type="submit">Kirim Lamaran</button>
-  </form>
-</section>
-</main>
-
+<main><section class="page-hero career-hero"><div><p class="eyebrow">CAREER</p><h1>Karir</h1><p>Bergabung dan berkembang bersama kami.</p></div></section><section class="section"><div class="section-title reveal"><p class="eyebrow dark-text">LOWONGAN</p><h2>Posisi Tersedia</h2></div><div class="filter-bar reveal"><button class="filter-btn active" onclick="filterItems('all','job-item',this)">Semua</button><button class="filter-btn" onclick="filterItems('it','job-item',this)">IT</button><button class="filter-btn" onclick="filterItems('admin','job-item',this)">Admin</button><button class="filter-btn" onclick="filterItems('site','job-item',this)">Site</button></div><div class="job-grid"><article class="job-card job-item reveal" data-category="admin"><h3>Admin Staff</h3><p>Full Time • Weda Bay</p><button onclick="selectJob('Admin Staff')">Apply</button></article><article class="job-card job-item reveal" data-category="it"><h3>IT Support</h3><p>Full Time • Site Office</p><button onclick="selectJob('IT Support')">Apply</button></article><article class="job-card job-item reveal" data-category="it"><h3>Backend Developer</h3><p>Contract • Head Office</p><button onclick="selectJob('Backend Developer')">Apply</button></article><article class="job-card job-item reveal" data-category="site"><h3>Safety Officer</h3><p>Full Time • Site</p><button onclick="selectJob('Safety Officer')">Apply</button></article></div></section><section class="section soft-section"><div class="section-title reveal"><p class="eyebrow dark-text">APPLY</p><h2>Form Lamaran Simulasi</h2></div><form class="modern-form reveal" onsubmit="submitApply(event)"><input id="jobPosition" type="text" placeholder="Posisi yang dilamar" required><input type="text" placeholder="Nama lengkap" required><input type="email" placeholder="Email" required><input type="tel" placeholder="Nomor HP" required><label class="file-input">Upload CV <input type="file" required></label><textarea rows="5" placeholder="Pesan singkat"></textarea><button type="submit">Kirim Lamaran</button></form></section></main>
 <footer class="footer">
   <div class="footer-grid">
-    <div>
-      <h3>IWIP</h3>
-      <p>Company profile modern berbasis HTML, CSS, dan JavaScript untuk GitHub Pages.</p>
-    </div>
-    <div>
-      <h4>Menu</h4>
-      <a href="about.html">Tentang</a>
-      <a href="news.html">News</a>
-      <a href="career.html">Karir</a>
-      <a href="contact.html">Kontak</a>
-    </div>
-    <div>
-      <h4>Kontak</h4>
-      <p>Email: info@company.co.id</p>
-      <p>Telepon: +62 812 0000 0000</p>
-      <p>Weda Bay, Indonesia</p>
-    </div>
+    <div><a href="index.html" class="brand footer-brand"><span class="brand-mark"></span><span>IWIP</span></a><p>Template company profile modern, ringan, responsif, dan siap digunakan di GitHub Pages.</p></div>
+    <div><h4>Menu</h4><a href="about.html">Tentang</a><a href="news.html">Kegiatan</a><a href="career.html">Karir</a><a href="esg.html">ESG</a></div>
+    <div><h4>Kontak</h4><p>Email: info@company.co.id</p><p>Telp: +62 812 0000 0000</p><p>Weda Bay, Indonesia</p></div>
   </div>
-  <div class="copyright">© 2026 IWIP Company Profile. All Rights Reserved.</div>
+  <div class="footer-bottom">© 2026 IWIP Modern Website. All Rights Reserved.</div>
 </footer>
-
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <h2 id="modalTitle">Detail</h2>
-    <p id="modalText">Informasi detail akan tampil di sini.</p>
-  </div>
-</div>
-
+<div class="modal" id="modal"><div class="modal-content"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle">Detail</h2><p id="modalText">Informasi detail akan tampil di sini.</p></div></div>
 <button class="backtop" id="backtop" onclick="backToTop()">↑</button>
-
-<script>window.ACTIVE_PAGE = "career";</script>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>

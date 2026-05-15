@@ -1,6 +1,6 @@
-# IWIP Full Website Static
+# IWIP Modern Dynamic Website
 
-Website multi-page siap upload ke GitHub Pages.
+Website static multi-page siap upload ke GitHub Pages.
 
 ## Halaman
 - index.html
@@ -12,25 +12,21 @@ Website multi-page siap upload ke GitHub Pages.
 - contact.html
 
 ## Fitur
-- Responsive navbar
-- Multi-page navigation
-- Hero slider
-- Search overlay
+- Desain modern mirip contoh awal, dikembangkan lebih dinamis
+- Hero slider otomatis
+- Navbar sticky dan responsive
 - Dark mode
-- News filter
-- Career filter
-- Apply form simulasi
-- Contact form simulasi
+- Search overlay
+- Filter news
+- Filter career
+- Form apply simulasi
+- Form contact simulasi
 - Gallery preview
 - Modal popup
 - Scroll animation
-- Back to top
-- GitHub Pages ready
+- Counter statistik
+- Optimasi gambar dengan parameter kompresi dan lazy loading
 
-## Cara upload ke GitHub Pages
-1. Buat repository baru di GitHub.
-2. Upload semua file ke root repository.
-3. Buka Settings > Pages.
-4. Pilih Branch: main, Folder: /root.
-5. Klik Save.
-6. Website akan aktif di https://username.github.io/nama-repository/
+## GitHub Pages
+Upload semua file ke repository root:
+Settings > Pages > Branch main > /root > Save
