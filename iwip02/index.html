@@ -1,1 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INDOPARK — Indonesia Industrial Park</title>
+  <meta name="description" content="Indonesia's premier industrial park — driving growth through infrastructure, sustainability, and strategic partnerships." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2322c55e'/><text y='24' x='4' font-size='22' font-family='monospace' font-weight='900' fill='%23050d1a'>IP</text></svg>" />
+</head>
+<body>
 
+  <!-- ── Navigation ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">IP</div>
+        INDO<span>PARK</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="esg.html">ESG</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="searchBtn" title="Search">🔍</button>
+        <button class="nav-icon-btn" id="themeToggle" title="Toggle theme">☀️</button>
+        <a href="contact.html" class="nav-cta">Invest Now</a>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="career.html">Career</a>
+    <a href="esg.html">ESG</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <input type="text" placeholder="Search INDOPARK..." />
+        <button class="search-close">✕</button>
+      </div>
+      <div class="search-hints">
+        <span class="search-hint">Industrial Zone</span>
+        <span class="search-hint">ESG Report</span>
+        <span class="search-hint">Career Opportunities</span>
+        <span class="search-hint">Infrastructure</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Hero Section ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid-pattern"></div>
+
+    <div class="container hero-content">
+      <div class="hero-tag">🏭 Indonesia's Premier Industrial Zone</div>
+      <h1>
+        Powering
+        <em>Industrial</em>
+        Indonesia
+      </h1>
+      <p class="hero-desc">
+        INDOPARK delivers world-class infrastructure, strategic land parcels, and an integrated ecosystem for manufacturing, mining, and energy industries across the archipelago.
+      </p>
+      <div class="hero-actions">
+        <a href="about.html" class="btn btn-primary">Explore the Park ↗</a>
+        <a href="contact.html" class="btn btn-outline">Inquire Now</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ── Stats Section ── -->
+  <div class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-reveal>
+          <span class="stat-number" data-counter data-target="2400" data-suffix=" ha">0 ha</span>
+          <span class="stat-label">Total Land Area</span>
+        </div>
+        <div class="stat-item" data-reveal data-reveal-delay="1">
+          <span class="stat-number" data-counter data-target="180" data-suffix="+">0+</span>
+          <span class="stat-label">Tenant Companies</span>
+        </div>
+        <div class="stat-item" data-reveal data-reveal-delay="2">
+          <span class="stat-number" data-counter data-target="48000" data-suffix="+">0+</span>
+          <span class="stat-label">Jobs Created</span>
+        </div>
+        <div class="stat-item" data-reveal data-reveal-delay="3">
+          <span class="stat-number" data-counter data-target="12" data-suffix=" B USD">0 B USD</span>
+          <span class="stat-label">Total Investment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Company Intro ── -->
+  <section style="background: var(--navy-950); padding: 120px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+        <div data-reveal>
+          <div class="section-label">About INDOPARK</div>
+          <h2 class="section-title">Indonesia's Gateway to <span>Industrial Growth</span></h2>
+          <p class="section-desc" style="margin-bottom: 24px;">
+            Established in 2005, INDOPARK has grown into the nation's most strategically positioned industrial estate — offering plug-and-play facilities, deep-sea port access, and a supportive regulatory environment.
+          </p>
+          <p class="section-desc" style="margin-bottom: 40px;">
+            Our 2,400-hectare integrated complex spans manufacturing zones, nickel smelting facilities, energy infrastructure, and a fully serviced township for workers and management.
+          </p>
+          <a href="about.html" class="btn btn-primary">Our Story</a>
+        </div>
+        <div data-reveal data-reveal-delay="2">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="background: var(--navy-900); padding: 32px; border-radius: var(--radius-lg); border-left: 3px solid var(--green-500);">
+              <div style="font-size: 2rem; margin-bottom: 12px;">⚡</div>
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Power Supply</h4>
+              <p style="font-size: 0.8rem; color: var(--slate-400);">2,000 MW dedicated industrial power with 99.8% uptime guarantee</p>
+            </div>
+            <div style="background: var(--navy-900); padding: 32px; border-radius: var(--radius-lg); border-left: 3px solid var(--green-500); margin-top: 24px;">
+              <div style="font-size: 2rem; margin-bottom: 12px;">⚓</div>
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Deep-Sea Port</h4>
+              <p style="font-size: 0.8rem; color: var(--slate-400);">Direct port with 200,000 DWT capacity for global logistics</p>
+            </div>
+            <div style="background: var(--navy-900); padding: 32px; border-radius: var(--radius-lg); border-left: 3px solid var(--green-500); margin-top: -24px;">
+              <div style="font-size: 2rem; margin-bottom: 12px;">🌿</div>
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Green Certified</h4>
+              <p style="font-size: 0.8rem; color: var(--slate-400);">ISO 14001 environmental management across all operations</p>
+            </div>
+            <div style="background: var(--navy-900); padding: 32px; border-radius: var(--radius-lg); border-left: 3px solid var(--green-500);">
+              <div style="font-size: 2rem; margin-bottom: 12px;">🛡️</div>
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">One-Stop Service</h4>
+              <p style="font-size: 0.8rem; color: var(--slate-400);">Licensing, permitting, and regulatory support in one office</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── Features Section ── -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-header">
+        <div data-reveal>
+          <div class="section-label">What We Offer</div>
+          <h2 class="section-title">Built for <span>Industrial Scale</span></h2>
+        </div>
+        <div data-reveal data-reveal-delay="2">
+          <p class="section-desc">Six integrated pillars that make INDOPARK the most comprehensive industrial destination in Southeast Asia.</p>
+          <br />
+          <a href="about.html" class="btn btn-ghost">View All Facilities </a>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">🏗️</div>
+          <h3>Heavy Industry Zone</h3>
+          <p>Dedicated zoning for nickel smelting, steel manufacturing, and mineral processing with heavy-load infrastructure and industrial-grade utilities.</p>
+        </div>
+        <div class="feature-card" data-reveal data-reveal-delay="1">
+          <div class="feature-icon">🔋</div>
+          <h3>Energy Infrastructure</h3>
+          <p>On-site coal-fired and renewable power generation with redundant substations ensuring uninterrupted industrial operations at full capacity.</p>
+        </div>
+        <div class="feature-card" data-reveal data-reveal-delay="2">
+          <div class="feature-icon">🚢</div>
+          <h3>Maritime Logistics</h3>
+          <p>Private deep-sea port accommodating bulk carriers and container vessels, reducing export lead times significantly for all tenants.</p>
+        </div>
+        <div class="feature-card" data-reveal data-reveal-delay="3">
+          <div class="feature-icon">💧</div>
+          <h3>Water & Waste Systems</h3>
+          <p>Industrial-grade water treatment, storage, and wastewater management compliant with national and international environmental standards.</p>
+        </div>
+        <div class="feature-card" data-reveal data-reveal-delay="4">
+          <div class="feature-icon">🏘️</div>
+          <h3>Worker Township</h3>
+          <p>Fully integrated township with accommodation, healthcare, commercial areas, and recreation facilities supporting over 50,000 workers.</p>
+        </div>
+        <div class="feature-card" data-reveal data-reveal-delay="5">
+          <div class="feature-icon">📡</div>
+          <h3>Digital Connectivity</h3>
+          <p>Fiber-optic network, 5G coverage, and a smart monitoring platform enabling Industry 4.0 operations across the entire park.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Section ── -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner" data-reveal>
+        <div class="section-label" style="justify-content: center;">Start Your Journey</div>
+        <h2>Ready to <span>Invest</span> in Indonesia?</h2>
+        <p>Join 180+ global companies already operating at INDOPARK. Our dedicated investment team is ready to guide you through every step.</p>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-primary">Schedule a Site Visit ↗</a>
+          <a href="about.html" class="btn btn-outline">Download Brochure</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Latest News ── -->
+  <section style="background: var(--navy-950);">
+    <div class="container">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px;">
+        <div data-reveal>
+          <div class="section-label">Latest Updates</div>
+          <h2 class="section-title">News & <span>Activities</span></h2>
+        </div>
+        <a href="news.html" class="btn btn-ghost" data-reveal>View All News </a>
+      </div>
+
+      <div class="news-grid">
+        <div class="news-card" data-reveal data-reveal-delay="1" onclick="openNewsModal({title:'Phase 4 Expansion Breaks Ground',img:'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80',content:'<p>INDOPARK has officially broken ground on its Phase 4 expansion, adding 600 hectares of industrial land with new smelting facilities, expanded port infrastructure, and renewable energy capacity. The expansion is expected to create an additional 15,000 jobs by 2027.</p><p>The ceremony was attended by senior government officials, major tenant representatives, and international investors. Phase 4 targets nickel battery precursor production aligned with global EV supply chain demand.</p>'})">
+          <div class="news-card-img">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="Phase 4 Expansion" loading="lazy" />
+          </div>
+          <div class="news-card-body">
+            <div class="news-category">Industry</div>
+            <h3>Phase 4 Expansion Breaks Ground — 600 Ha of New Industrial Land</h3>
+            <p>The landmark ceremony marks INDOPARK's largest single-phase expansion, targeting EV battery supply chain integration.</p>
+            <div class="news-meta">
+              <span>May 12, 2025</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card" data-reveal data-reveal-delay="2" onclick="openNewsModal({title:'INDOPARK Achieves ISO 45001',img:'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80',content:'<p>INDOPARK has successfully obtained ISO 45001:2018 certification for occupational health and safety management. This achievement underscores our unwavering commitment to the safety and well-being of all workers and contractors operating within the industrial estate.</p><p>The audit process covered all operational zones, port facilities, power generation units, and administrative areas. Zero critical non-conformances were found during the final audit stage.</p>'})">
+          <div class="news-card-img">
+            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80" alt="Safety Certification" loading="lazy" />
+          </div>
+          <div class="news-card-body">
+            <div class="news-category">ESG</div>
+            <h3>INDOPARK Achieves ISO 45001 Safety Certification</h3>
+            <p>Zero critical non-conformances across all zones in the comprehensive occupational health and safety audit.</p>
+            <div class="news-meta">
+              <span>April 28, 2025</span>
+              <span>4 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card" data-reveal data-reveal-delay="3" onclick="openNewsModal({title:'Scholarship Program 2025',img:'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',content:'<p>INDOPARK Foundation has launched its 2025 scholarship program, awarding full scholarships to 250 students from surrounding communities in North Maluku. Recipients will pursue technical and engineering degrees at leading Indonesian universities.</p><p>The program is part of our broader CSR commitment to invest 2% of annual revenue into community development, education, and vocational training initiatives by 2030.</p>'})">
+          <div class="news-card-img">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80" alt="Scholarship Program" loading="lazy" />
+          </div>
+          <div class="news-card-body">
+            <div class="news-category">CSR</div>
+            <h3>250 Scholarships Awarded to Local Communities in 2025</h3>
+            <p>INDOPARK Foundation invests in the next generation through full university scholarships for North Maluku students.</p>
+            <div class="news-meta">
+              <span>March 15, 2025</span>
+              <span>3 min read</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom: 0;">
+            <div class="nav-logo-mark">IP</div>
+            INDO<span>PARK</span>
+          </a>
+          <p>Indonesia's most comprehensive integrated industrial park — connecting manufacturers, energy producers, and global supply chains at scale.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" title="LinkedIn">in</a>
+            <a href="#" class="social-btn" title="Twitter">𝕏</a>
+            <a href="#" class="social-btn" title="YouTube">▶</a>
+            <a href="#" class="social-btn" title="Instagram">◻</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About INDOPARK</a></li>
+            <li><a href="about.html#vision">Vision & Mission</a></li>
+            <li><a href="esg.html">ESG Commitment</a></li>
+            <li><a href="news.html">News & Activities</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="about.html">Industrial Zones</a></li>
+            <li><a href="about.html">Port & Logistics</a></li>
+            <li><a href="about.html">Power Supply</a></li>
+            <li><a href="about.html">Water Systems</a></li>
+            <li><a href="contact.html">Investor Relations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size:0.8rem;color:var(--slate-400);margin-bottom:16px;">Stay updated with industry news and INDOPARK developments.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 INDOPARK Industrial Estate. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Modal ── -->
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>News Title</h3>
+        <button class="modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-img" src="" alt="News" />
+        <div class="modal-body-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Back to Top ── -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

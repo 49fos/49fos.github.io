@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Activities — INDOPARK</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2322c55e'/><text y='24' x='4' font-size='22' font-family='monospace' font-weight='900' fill='%23050d1a'>IP</text></svg>" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-mark">IP</div>INDO<span>PARK</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="esg.html">ESG</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="searchBtn">🔍</button>
+        <button class="nav-icon-btn" id="themeToggle">☀️</button>
+        <a href="contact.html" class="nav-cta">Invest Now</a>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html" class="active">News</a>
+    <a href="career.html">Career</a>
+    <a href="esg.html">ESG</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <input type="text" placeholder="Search news..." />
+        <button class="search-close">✕</button>
+      </div>
+      <div class="search-hints">
+        <span class="search-hint">Expansion</span>
+        <span class="search-hint">ESG Report</span>
+        <span class="search-hint">Investment</span>
+        <span class="search-hint">Community</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1920&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-grid"></div>
+    <div class="container page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> News</div>
+      <div class="section-label">Latest Updates</div>
+      <h1>News & <span style="color:var(--green-500)">Activities</span></h1>
+    </div>
+  </div>
+
+  <section style="background: var(--navy-950);">
+    <div class="container">
+      <!-- Filters -->
+      <div class="news-filters" data-filter-group data-reveal>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="industry">Industry</button>
+        <button class="filter-btn" data-filter="esg">ESG</button>
+        <button class="filter-btn" data-filter="csr">CSR</button>
+        <button class="filter-btn" data-filter="investment">Investment</button>
+        <button class="filter-btn" data-filter="operations">Operations</button>
+      </div>
+
+      <!-- Featured Article -->
+      <div data-reveal style="margin-bottom: 48px; cursor: pointer; background: var(--navy-900); border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--glass-border); display: grid; grid-template-columns: 1.4fr 1fr;" onclick="openNewsModal({title:'INDOPARK Announces Net-Zero 2040 Roadmap',img:'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80',content:'<p>INDOPARK has officially launched its comprehensive Net-Zero 2040 Roadmap, outlining a phased decarbonization strategy covering energy transition, carbon capture, and circular economy initiatives across all operations.</p><p>Key milestones include: 500 MW of solar and geothermal energy by 2028, 40% reduction in Scope 1 emissions by 2030, full transition to renewable energy for administrative buildings by 2027, and net-zero carbon operations across the entire industrial estate by 2040.</p><p>The roadmap was developed in collaboration with leading sustainability consultancies, international development banks, and guidance from Indonesia\'s Ministry of Energy and Mineral Resources. It represents a USD 2.3 billion capital commitment over the next 15 years.</p>'})">
+        <div style="aspect-ratio: auto; min-height: 360px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80" alt="Featured" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.8);transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          <div style="position:absolute;top:24px;left:24px;background:var(--green-500);color:var(--navy-950);font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;padding:6px 14px;border-radius:100px;font-weight:700;">Featured</div>
+        </div>
+        <div style="padding: 48px 56px; display: flex; flex-direction: column; justify-content: center;">
+          <div class="news-category">ESG</div>
+          <h2 style="font-size: 1.8rem; font-weight: 800; text-transform: uppercase; line-height: 1.2; margin-bottom: 16px; color: var(--white);">INDOPARK Announces Ambitious Net-Zero 2040 Roadmap</h2>
+          <p style="color: var(--slate-400); line-height: 1.7; margin-bottom: 24px; font-size: 0.9rem;">A comprehensive decarbonization strategy committing USD 2.3 billion toward renewable energy, carbon capture, and circular economy initiatives across all 2,400 hectares.</p>
+          <div class="news-meta" style="margin-bottom: 28px;">
+            <span>June 1, 2025</span>
+            <span>8 min read</span>
+          </div>
+          <a href="#" class="btn btn-primary" style="align-self: flex-start;" onclick="event.stopPropagation()">Read Full Article ↗</a>
+        </div>
+      </div>
+
+      <!-- News Grid -->
+      <div class="news-grid" data-filter-container>
+
+        <div class="news-card" data-reveal data-category="industry" data-reveal-delay="1" onclick="openNewsModal({title:'Phase 4 Expansion Breaks Ground',img:'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80',content:'<p>INDOPARK has officially broken ground on its Phase 4 expansion, adding 600 hectares of industrial land. The expansion targets nickel battery precursor production and EV supply chain integration.</p><p>Construction of Phase 4 infrastructure is expected to complete by Q3 2026, with first tenant operations commencing in Q1 2027. The expansion will accommodate up to 45 new industrial tenants with an additional investment capacity of USD 3.5 billion.</p>'})">
+          <div class="news-card-img"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="Expansion" loading="lazy" /></div>
+          <div class="news-card-body">
+            <div class="news-category">Industry</div>
+            <h3>Phase 4 Expansion Breaks Ground — 600 Ha of New Industrial Land</h3>
+            <p>The landmark ceremony marks INDOPARK's largest single-phase expansion, targeting EV battery supply chain integration.</p>
+            <div class="news-meta"><span>May 12, 2025</span><span>6 min read</span></div>
+          </div>
+        </div>
+
+        <div class="news-card" data-reveal data-category="esg" data-reveal-delay="2" onclick="openNewsModal({title:'INDOPARK Achieves ISO 45001 Safety Certification',img:'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80',content:'<p>INDOPARK has successfully obtained ISO 45001:2018 certification for occupational health and safety management. Zero critical non-conformances were found during the final audit stage.</p><p>The certification process involved a comprehensive 90-day audit covering all 2,400 hectares of the industrial estate including the deep-sea port, power plants, smelting facilities, and worker township. Over 12,000 workers participated in safety culture assessments.</p>'})">
+          <div class="news-card-img"><img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80" alt="Safety" loading="lazy" /></div>
+          <div class="news-card-body">
+            <div class="news-category">ESG</div>
+            <h3>INDOPARK Achieves ISO 45001 Safety Certification</h3>
+            <p>Zero critical non-conformances across all zones in the comprehensive occupational health and safety audit.</p>
+            <div class="news-meta"><span>April 28, 2025</span><span>4 min read</span></div>
+          </div>
+        </div>
+
+        <div class="news-card" data-reveal data-category="csr" data-reveal-delay="3" onclick="openNewsModal({title:'250 Scholarships Awarded to Local Communities',img:'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',content:'<p>INDOPARK Foundation has awarded 250 full scholarships to students from North Maluku communities. Recipients will pursue engineering, technology, and management degrees at leading Indonesian universities.</p><p>The 2025 cohort was selected from over 1,800 applicants through a rigorous academic merit and community leadership assessment. The program has produced 1,200 graduates since its founding in 2010, with 78% returning to work in the industrial sector.</p>'})">
+          <div class="news-card-img"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80" alt="Scholarship" loading="lazy" /></div>
+          <div class="news-card-body">
+            <div class="news-category">CSR</div>
+            <h3>250 Scholarships Awarded to Local Communities in 2025</h3>
+            <p>INDOPARK Foundation invests in the next generation through full university scholarships for North Maluku students.</p>
+            <div class="news-meta"><span>March 15, 2025</span><span>3 min read</span></div>
+          </div>
+        </div>
+
+        <div class="news-card" data-reveal data-category="investment" data-reveal-delay="1" onclick="openNewsModal({title:'USD 800M Investment from South Korean EV Consortium',img:'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',content:'<p>A consortium of five South Korean EV battery manufacturers has committed USD 800 million to establish production facilities within INDOPARK. The investment includes cathode active material plants, battery cell assembly lines, and R&D laboratories.</p><p>The facilities are expected to commence operations in 2027 and will supply major EV manufacturers in Europe and North America. The investment is projected to create 8,500 direct jobs and an additional 15,000 indirect employment opportunities in the region.</p>'})">
+          <div class="news-card-img"><img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="Investment" loading="lazy" /></div>
+          <div class="news-card-body">
+            <div class="news-category">Investment</div>
+            <h3>USD 800M Investment from South Korean EV Battery Consortium</h3>
+            <p>Five leading Korean manufacturers commit to building cathode material and battery assembly facilities within INDOPARK.</p>
+            <div class="news-meta"><span>February 20, 2025</span><span>5 min read</span></div>
+          </div>
+        </div>
+
+        <div class="news-card" data-reveal data-category="operations" data-reveal-delay="2" onclick="openNewsModal({title:'New Smart Grid System Reduces Energy Waste by 18%',img:'https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80',content:'<p>INDOPARK has completed installation of an AI-powered smart grid management system across the entire estate. Early operational data shows an 18% reduction in energy waste and a 23% improvement in load balancing efficiency.</p><p>The system uses real-time consumption data, predictive analytics, and automated load-shedding to optimize power distribution across 180 tenant facilities simultaneously. The system has already prevented 14 potential grid instability events since going live in January 2025.</p>'})">
+          <div class="news-card-img"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80" alt="Smart Grid" loading="lazy" /></div>
+          <div class="news-card-body">
+            <div class="news-category">Operations</div>
+            <h3>New Smart Grid System Reduces Energy Waste by 18%</h3>
+            <p>AI-powered grid management delivers significant efficiency gains across 180 tenant facilities in the industrial estate.</p>
+            <div class="news-meta"><span>January 30, 2025</span><span>4 min read</span></div>
+          </div>
+        </div>
+
+        <div class="news-card" data-reveal data-category="csr" data-reveal-delay="3" onclick="openNewsModal({title:'Coastal Mangrove Restoration Project Launches',img:'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',content:'<p>INDOPARK and WWF Indonesia have partnered to restore 1,200 hectares of coastal mangrove forest surrounding the industrial estate. The five-year program will replant native mangrove species, creating critical habitat for marine biodiversity.</p><p>The mangrove belt will also serve as a natural carbon sink, absorbing an estimated 45,000 tonnes of CO₂ annually. Local fishing communities are actively involved in planting and monitoring activities, earning supplemental income through the conservation program.</p>'})">
+          <div class="news-card-img"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80" alt="Mangrove" loading="lazy" /></div>
+          <div class="news-card-body">
+            <div class="news-category">CSR</div>
+            <h3>Coastal Mangrove Restoration Partnership with WWF Indonesia</h3>
+            <p>Five-year program to restore 1,200 hectares of coastal mangrove forest, sequestering 45,000 tonnes of CO₂ annually.</p>
+            <div class="news-meta"><span>January 10, 2025</span><span>3 min read</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Load More -->
+      <div style="text-align: center; margin-top: 64px;" data-reveal>
+        <button class="btn btn-outline" onclick="this.textContent='No more articles to load'">Load More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Article Title</h3>
+        <button class="modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-img" src="" alt="News" />
+        <div class="modal-body-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><div class="nav-logo-mark">IP</div>INDO<span>PARK</span></a>
+          <p>Indonesia's most comprehensive integrated industrial park — connecting manufacturers, energy producers, and global supply chains at scale.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">◻</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About INDOPARK</a></li><li><a href="esg.html">ESG Commitment</a></li><li><a href="news.html">News</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="about.html">Industrial Zones</a></li><li><a href="about.html">Port & Logistics</a></li><li><a href="about.html">Power Supply</a></li><li><a href="contact.html">Investor Relations</a></li></ul></div>
+        <div class="footer-col"><h4>Newsletter</h4><p style="font-size:0.8rem;color:var(--slate-400);margin-bottom:16px;">Stay updated with INDOPARK news.</p><form class="newsletter-form"><input type="email" placeholder="Your email" /><button type="submit">Go</button></form></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 INDOPARK Industrial Estate. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
