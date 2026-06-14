@@ -1,1 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beasiswa IWIP 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --green:       #6DB33F;
+      --green-dark:  #4E8A2A;
+      --green-light: #EAF4E1;
+      --navy:        #1A2B3C;
+      --gray-dark:   #444444;
+      --gray-mid:    #777777;
+      --gray-light:  #F5F5F5;
+      --border:      #DDDDDD;
+      --white:       #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--white);
+      color: var(--gray-dark);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    /* ── HERO dengan logo di dalam ── */
+    .hero {
+      position: relative;
+      min-height: 440px;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.62) 100%),
+        url('img/banner.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Logo di kanan atas dalam hero */
+    .hero-topbar {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px 28px;
+    }
+    .topbar-logo { text-decoration: none; display: inline-block; }
+    .logo-img {
+      height: 48px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 1px 4px rgba(0,0,0,0.5));
+    }
+
+    /* Konten tengah hero */
+    .hero-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 24px 52px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 2px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      margin-bottom: 12px;
+      max-width: 680px;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.8);
+      font-size: 1rem;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .btn-primary:hover { background: var(--green-dark); }
+    .hero-note {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.78rem;
+      margin-top: 10px;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── INFO SECTION ── */
+    .info-section {
+      padding: 52px 0 40px;
+    }
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--green);
+      display: inline-block;
+    }
+    .info-text {
+      color: var(--gray-dark);
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    /* ── MANFAAT GRID ── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .benefit-card {
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--green);
+      border-radius: 4px;
+      padding: 20px 18px;
+      background: var(--white);
+    }
+    .benefit-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .benefit-card h3 { font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .benefit-card p { font-size: 0.83rem; color: var(--gray-mid); }
+
+    /* ── SYARAT LIST ── */
+    .req-list {
+      margin-top: 20px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .req-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .req-item:last-child { border-bottom: none; }
+    .req-check {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.65rem;
+      margin-top: 2px;
+    }
+    .req-text { font-size: 0.92rem; }
+
+    /* ── TIMELINE ── */
+    .timeline { margin-top: 24px; }
+    .tl-item {
+      display: flex;
+      gap: 18px;
+      padding-bottom: 24px;
+      position: relative;
+    }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .tl-item:last-child::before { display: none; }
+    .tl-dot {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gray-mid);
+      position: relative;
+      z-index: 1;
+    }
+    .tl-dot.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: var(--white);
+    }
+    .tl-content { padding-top: 4px; }
+    .tl-step {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .tl-title { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-top: 2px; }
+    .tl-desc { font-size: 0.83rem; color: var(--gray-mid); margin-top: 2px; }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 8px 0;
+    }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: var(--green-light);
+      border: 1px solid #C5E3AC;
+      border-left: 4px solid var(--green);
+      border-radius: 4px;
+      padding: 32px;
+      text-align: center;
+      margin: 40px 0 56px;
+    }
+    .cta-box h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .cta-box p {
+      color: var(--gray-mid);
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 20px 24px;
+      font-size: 0.8rem;
+    }
+    footer a { color: rgba(255,255,255,0.65); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .hero-topbar { padding: 14px 16px; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero-body { padding: 16px 16px 40px; }
+      .container { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero (dengan logo di kanan atas & CTA di dalam) -->
+  <div class="hero">
+    <!-- Logo kiri atas -->
+    <div class="hero-topbar">
+      <a href="https://IWIP.co.id" class="topbar-logo">
+      <img src="img/logo_iwip.png" alt="IWIP" class="logo-img" />
+      </a>
+    </div>
+
+    <!-- Konten tengah -->
+    <div class="hero-body">
+      <span class="hero-eyebrow">Program Resmi 2026</span>
+      <h1>Beasiswa IWIP untuk Generasi Berprestasi</h1>
+      <p class="hero-sub">Wujudkan potensimu bersama IWIP. Pendaftaran gratis, dilakukan sepenuhnya secara online.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScYgVCNoYQPCr-CDCU0rdsoILyq02BEc-unNCazTVaELCVO_Q/closedform" class="btn-primary">Daftar Sekarang →</a>
+      <p class="hero-note">Gratis · Online · Terbuka untuk seluruh Indonesia</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- Tentang -->
+    <div class="info-section">
+      <div class="section-title">Tentang Program</div>
+      <p class="info-text">
+        Program Beasiswa IWIP hadir sebagai bentuk nyata kepedulian terhadap dunia pendidikan. Kami membuka kesempatan bagi generasi muda berprestasi untuk berkembang dan berkontribusi bersama komunitas IWIP.
+      </p>
+      <p class="info-text">
+        Pendaftaran dilakukan sepenuhnya secara online dan gratis. Isi formulir di bawah untuk memulai proses pendaftaran.
+      </p>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- Manfaat -->
+    <div class="info-section">
+      <div class="section-title">Manfaat Beasiswa</div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🎓</div>
+          <h3>Dukungan Pendidikan</h3>
+          <p>Bantuan biaya pendidikan untuk menunjang proses belajar.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🤝</div>
+          <h3>Jaringan Komunitas</h3>
+          <p>Bergabung dalam komunitas IWIP yang aktif dan suportif.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📚</div>
+          <h3>Pengembangan Diri</h3>
+          <p>Akses program pelatihan dan pengembangan kompetensi.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏅</div>
+          <h3>Sertifikasi Resmi</h3>
+          <p>Sertifikat resmi sebagai penerima beasiswa IWIP.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- Syarat -->
+    <div class="info-section">
+      <div class="section-title">Persyaratan</div>
+      <p class="info-text">Pastikan kamu memenuhi persyaratan berikut sebelum mengisi formulir pendaftaran.</p>
+      <div class="req-list">
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Warga Negara Indonesia</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Masih aktif sebagai pelajar / mahasiswa</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Memiliki prestasi akademik atau non-akademik</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Berkomitmen mengikuti seluruh rangkaian program</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Melengkapi seluruh dokumen yang dipersyaratkan</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- Alur -->
+    <div class="info-section">
+      <div class="section-title">Alur Pendaftaran</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot active">1</div>
+          <div class="tl-content">
+            <div class="tl-step">Tahap 1</div>
+            <div class="tl-title">Isi Formulir Pendaftaran</div>
+            <div class="tl-desc">Lengkapi data diri dan unggah dokumen melalui Google Form.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">2</div>
+          <div class="tl-content">
+            <div class="tl-step">Tahap 2</div>
+            <div class="tl-title">Seleksi Administrasi</div>
+            <div class="tl-desc">Tim IWIP memverifikasi kelengkapan berkas pendaftaran.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">3</div>
+          <div class="tl-content">
+            <div class="tl-step">Tahap 3</div>
+            <div class="tl-title">Pengumuman Hasil</div>
+            <div class="tl-desc">Peserta yang lolos akan dihubungi melalui kontak yang didaftarkan.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">4</div>
+          <div class="tl-content">
+            <div class="tl-step">Tahap 4</div>
+            <div class="tl-title">Penerimaan Beasiswa</div>
+            <div class="tl-desc">Selamat! Mulai perjalananmu bersama IWIP.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <h2>Siap Mendaftar?</h2>
+      <p>Pendaftaran gratis dan dilakukan sepenuhnya secara online. Klik tombol di bawah untuk mengisi formulir sekarang.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScYgVCNoYQPCr-CDCU0rdsoILyq02BEc-unNCazTVaELCVO_Q/closedform" class="btn-primary">Daftar Beasiswa Sekarang</a>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 IWIP · <a href="https://IWIP.co.id">IWIP.co.id</a></p>
+  </footer>
+
+</body>
+</html>
